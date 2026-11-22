@@ -23,6 +23,7 @@ server_script "server/catalogue.lua"
 server_script "server/actions.lua"
 server_script "server/commands.lua"
 server_script "server/main.lua"
+server_script "server/version.lua"
 
 client_script "client/main.lua"
 
@@ -37,4 +38,5 @@ permissions {
 	"players.life.read",    -- server: Open77.players.get (stash distance), Open77.players.isDead (no use / give while dead)
 	"input.actions",        -- client: RegisterKeyMapping (inventory key), Open77.input.setActionBlocked('Hub')
 	"ui.vanilla.hud",       -- client: Open77.hud.notify when opx_core does not answer
+	"http.request", -- server: Open77.http.get (update check, Config.versionCheck)
 }
